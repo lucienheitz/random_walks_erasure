@@ -1,6 +1,7 @@
 import logging
 import time
-import graph_recommender as graphRecommender
+import randomwalks.graph_recommender_rp3beta as graphRecommender
+#import randomwalks.graph_recommender_erasure as graphRecommender
 
 # Default parameter values for the recommender algorithm
 PARAMETER_B = 2
@@ -86,7 +87,6 @@ def runArticleRecommender(userPositions, itemPositions):
 
     # Stop and measure the time it takes to perform the article recommendation proces for benchmaking
     trainTime = time.time() - t0
-
     print("Total recommending time:\n" + str(trainTime))
 
     return articleRecommendations

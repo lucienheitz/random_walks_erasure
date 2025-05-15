@@ -1,6 +1,5 @@
-from __future__ import print_function
 import numpy as np
-from math import log
+from __future__ import print_function
 
 class GraphRec(object):
 
@@ -40,10 +39,8 @@ class GraphRec(object):
 
         if (user_pos < 0 and diff <= 0):
             return 0.1
-
         elif ((user_pos > 0 and diff >= 0)):
             return 0.1
-
         else:
             abs_diff = np.abs(diff/(self.max_pos - self.min_pos))
             return abs_diff
@@ -59,7 +56,6 @@ class GraphRec(object):
                               (*np.meshgrid(i_pos, u_pos, indexing = 'xy')))
 
         upper_block = np.concatenate((np.zeros((self.num_u, self.num_u)), i_u_dist), axis = 1)
-
         lower_block = np.concatenate((np.zeros((self.num_i, self.num_u)),
                                       np.zeros((self.num_i, self.num_i))), axis = 1)
 
@@ -81,7 +77,6 @@ class GraphRec(object):
             self.compute_p2_p3()
 
         item_user_distance_matrix = self._construct_item_user_distance_matrix(u_pos, i_pos, type)
-
         dist_reweigh = item_user_distance_matrix ** b
 
         P3 = self.P3.copy()
