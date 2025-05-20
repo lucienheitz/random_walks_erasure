@@ -1,5 +1,7 @@
 import logging
 import time
+
+# Uncomment if you want to switch the random walk version
 import randomwalks.graph_recommender_rp3beta as graphRecommender
 #import randomwalks.graph_recommender_erasure as graphRecommender
 
@@ -29,8 +31,6 @@ def setParameterIterations(iterations):
 def setParameterType(type):
     PARAMETER_TYPE = type
 
-# Detailed description of recommender parameters from meetings and e-mail conversations with Bibek:
-#
 # If you have multiple training datasets (e.g., if multiple train-test splits) pass a list of training 
 # datasets to the recommender.
 #

@@ -1,9 +1,9 @@
-import numpy as np
-import scipy.sparse as sp
-
 from __future__ import print_function
 from scipy.sparse import csr_matrix
 from scipy.sparse import hstack, vstack
+import numpy as np
+import scipy.sparse as sp
+
 
 class GraphRec(object):
     """

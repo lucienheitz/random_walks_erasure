@@ -23,6 +23,7 @@ np.random.seed(0)
 
 logger = logging.getLogger(__name__)
 
+
 class IdeologyFromTweets(object):
 
     def __init__(self, 
